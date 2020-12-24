@@ -65,6 +65,8 @@ public class JmsTool {
                 helpCommand.execute(jCommander);
                 break;
             default:
+                LOGGER.error(String.format("Operation %s not supported, please send correct arguments", command));
+                helpCommand.execute(jCommander);
                 break;
         }
     }
