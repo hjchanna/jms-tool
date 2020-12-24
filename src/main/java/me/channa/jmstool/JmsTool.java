@@ -52,6 +52,7 @@ public class JmsTool {
         if (command == null) {
             LOGGER.error("Invalid arguments, please send correct arguments");
             helpCommand.execute(jCommander);
+            return;
         }
 
         switch (command) {

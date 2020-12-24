@@ -87,14 +87,14 @@ public class ConsumeCommand implements ICommand {
                     while (messagePropertyNames.hasMoreElements()) {
                         String propertyName = messagePropertyNames.nextElement().toString();
                         stringBuilder
+                                .append("[JMS-PROPERTY] ")
                                 .append(propertyName)
                                 .append(":")
                                 .append(message.getStringProperty(propertyName))
                                 .append("\n");
                     }
 
-                    stringBuilder.append("message")
-                            .append(":")
+                    stringBuilder.append("[JMS-MESSAGE]: ")
                             .append(((TextMessage) message).getText());
 
                     LOGGER.info(stringBuilder.toString());

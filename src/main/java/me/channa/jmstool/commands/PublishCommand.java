@@ -67,10 +67,10 @@ public class PublishCommand implements ICommand {
 
             // Iterate over the number of message count to receive
             for (int i = 0; i < count; i++) {
-                TextMessage jmsMessage = queueSession.createTextMessage(String.format(message, i));
+                TextMessage jmsMessage = queueSession.createTextMessage(String.format(message, i + 1));
                 producer.send(jmsMessage);
 
-                LOGGER.info(String.format("Message publish with text: %s", String.format(message, i)));
+                LOGGER.info(String.format("Message publish with text: %s", String.format(message, i + 1)));
             }
 
         } catch (NamingException | JMSException exception) {
