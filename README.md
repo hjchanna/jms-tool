@@ -1,4 +1,5 @@
 # jms-tool
+![Java CI with Maven](https://github.com/hjchanna/jms-tool/workflows/Java%20CI%20with%20Maven/badge.svg)
 > jms-tool is a command line utility tool that is used to troubleshoot JMS connections and related business use cases. Especially jms-tool could be used to pick erroneous messages from the message queues in order to continue business operations.  
  
 ```
